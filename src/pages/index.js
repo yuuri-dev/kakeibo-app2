@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
-export const params = createContext();
+export const Params_Context = createContext();
 
 export default function Home() {
   const [is_Modal, set_Modal] = useState(false);
@@ -23,11 +23,11 @@ export default function Home() {
 
   return (
     <>
-      <params.Provider value={(is_Modal, set_Modal)}>
+      <Params_Context.Provider value={{is_Modal, set_Modal}}>
         <h1>家計簿アプリ</h1>
         <h2>Kakeibo</h2>
         <List />
-      </params.Provider>
+      </Params_Context.Provider>
     </>
   );
 }
