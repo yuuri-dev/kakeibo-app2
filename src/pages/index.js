@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Geist, Geist_Mono } from 'next/font/google';
 import styles from '@/styles/Home.module.css';
 import List from '@/components/List';
+import AddButton from '@/components/AddButton';
 import { useState, createContext } from 'react';
 
 const geistSans = Geist({
@@ -15,7 +16,7 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
-export const params = createContext();
+export const Params_Context = createContext();
 
 export default function Home() {
   const [is_Modal, set_Modal] = useState(false);
@@ -23,11 +24,12 @@ export default function Home() {
 
   return (
     <>
-      <params.Provider value={(is_Modal, set_Modal)}>
+      <Params_Context.Provider value={{is_Modal, set_Modal}}>
         <h1>家計簿アプリ</h1>
         <h2>Kakeibo</h2>
         <List />
-      </params.Provider>
+        <AddButton />
+      </Params_Context.Provider>
     </>
   );
 }
