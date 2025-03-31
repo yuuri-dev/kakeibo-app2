@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Geist, Geist_Mono } from 'next/font/google';
 import styles from '@/styles/Home.module.css';
 import List from '@/components/List';
+import AddButton from '@/components/AddButton';
 import { useState, createContext } from 'react';
 
 const geistSans = Geist({
@@ -27,6 +28,7 @@ export default function Home() {
         <h1>家計簿アプリ</h1>
         <h2>Kakeibo</h2>
         <List />
+        <AddButton />
       </Params_Context.Provider>
     </>
   );
