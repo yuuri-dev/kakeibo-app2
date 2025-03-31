@@ -1,0 +1,13 @@
+
+.card{
+    display: flex;
+    padding: 20px;
+}
+
+.card_title{
+    padding-right: 20px;
+}
+
+.card_price{
+    color:red
+}

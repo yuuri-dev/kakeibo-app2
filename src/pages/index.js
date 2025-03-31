@@ -5,6 +5,7 @@ import styles from '@/styles/Home.module.css';
 import List from '@/components/List';
 import AddButton from '@/components/AddButton';
 import { useState, createContext } from 'react';
+import Modal from '@/components/Modal';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -20,14 +21,13 @@ export const Params_Context = createContext();
 
 export default function Home() {
   const [is_Modal, set_Modal] = useState(false);
-  const [sum, setSum] = useState(0);
+  const [sum, set_Sum] = useState(0);
 
   return (
     <>
-      <Params_Context.Provider value={{is_Modal, set_Modal}}>
+      <Params_Context.Provider value={{ is_Modal, set_Modal, sum, set_Sum }}>
         <h1>家計簿アプリ</h1>
-        <h2>Kakeibo</h2>
-        <List />
+        {is_Modal ? <List /> : <Modal /> }
         <AddButton />
       </Params_Context.Provider>
     </>
