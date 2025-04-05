@@ -16,7 +16,8 @@ export default function Home() {
       <Params_Context.Provider value={{ is_Modal, set_Modal, sum, set_Sum }}>
         <div className={styles.container}>
           <h1 className={styles.app_title}>家計簿アプリ</h1>
-          {is_Modal ? <List /> : <Modal />}
+          <List />
+          {is_Modal && <Modal />}
           <AddButton />
         </div>
       </Params_Context.Provider>
