@@ -1,3 +1,19 @@
+.container{
+  width:80%;
+  padding:3% 10%;
+
+}
+
+.app_title{
+  text-align: center;
+}
+
+
+
+
+
+
+/*  初期設定  */
 .page {
   --gray-rgb: 0, 0, 0;
   --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
