@@ -1,13 +1,32 @@
-
-.card{
-    display: flex;
-    padding: 20px;
+.scroll_container {
+  max-height: 400px; /* スクロールエリアの高さ（好きに調整OK） */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column; /* 縦に並べる */
+  gap: 16px;
+  padding: 16px;
 }
 
-.card_title{
-    padding-right: 20px;
+/* カードを横に並べる */
+.card {
+  display: flex;
+  width: 200px;
+  height: 60px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.card_price{
-    color:red
+/* タイトルと価格（任意） */
+.card_title {
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.card_price {
+  font-size: 16px;
+    margin: 0;
+  color: #444;
 }
